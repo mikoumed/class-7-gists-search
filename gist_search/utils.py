@@ -1,4 +1,5 @@
 import requests
+from pprint import pprint
 
 BASE_URL = 'https://api.github.com/users/{username}/gists'
 
@@ -9,3 +10,4 @@ def get_gists(username):
     if not resp.ok:
         return None
     return resp.json()
+
